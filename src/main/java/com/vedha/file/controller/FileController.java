@@ -5,6 +5,7 @@ import com.vedha.file.entity.FilesEntity;
 import com.vedha.file.service.FileService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
@@ -19,8 +20,9 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/file")
+@RequestMapping("/api/v1/files")
 @RequiredArgsConstructor
+@Tag(name = "File Controller", description = "File Controllers Upload And Download Files")
 public class FileController {
 
     private final FileService fileService;

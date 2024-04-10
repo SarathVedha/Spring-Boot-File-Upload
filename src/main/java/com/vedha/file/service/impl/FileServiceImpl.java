@@ -47,7 +47,7 @@ public class FileServiceImpl implements FileService {
 
             String uriString = ServletUriComponentsBuilder
                     .fromCurrentContextPath()
-                    .path("/api/v1/file/download/")
+                    .path("/api/v1/files/download/")
                     .path(save.getId().toString())
                     .toUriString(); // This will return the URI string
 
@@ -83,7 +83,7 @@ public class FileServiceImpl implements FileService {
                 .fileName(filesEntity.getFileName())
                 .fileUrl(ServletUriComponentsBuilder
                         .fromCurrentContextPath()
-                        .path("/api/v1/file/download/")
+                        .path("/api/v1/files/download/")
                         .path(filesEntity.getId().toString())
                         .toUriString())
                 .fileType(filesEntity.getFileType())
